@@ -54,7 +54,7 @@ const fullWidthStyle = css `
   ${props => props.fullWidth && css `
     width: 100%;
     justify-content: center;
-    & + & {
+    &:not(:first-child) {
       margin-left: 0;
       margin-top: 1rem;
     }
@@ -81,7 +81,7 @@ const StyledButton = styled.button `
   ${colorStyles}
 
   /* 기타 */
-  & + & {
+  &:not(:first-child) {
     margin-left: 1rem;
   }
 
